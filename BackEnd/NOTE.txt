@@ -74,5 +74,15 @@ the Swagger generator, defining one or more Swagger documents.
        context.Response.Redirect("/swagger");
        return Task.CompletedTask;
    });
+
    ```
+
+   Building out the DTO
+   Add a new class library by rght clicking on the solution and choosing .NET Standard
+   Add this project to backend project as a dependency
+
+   From the command line
+      dotnet new classlib -o ConferenceDTO -f netstandard2.0
+
+	dotnet add reference ../ConferenceDTO/ConferenceDTO.csproj  // from the command line
 
